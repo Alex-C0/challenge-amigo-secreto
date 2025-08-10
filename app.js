@@ -26,4 +26,15 @@ function actualizarAmigo() {
     }
 }
 
+function sortearAmigo(){
+    if (listaAmigos.length === 0) {
+        alert("No hay amigos disponibles para sortear");
+    } else {
+        let amigoSeleccionado = Math.floor(Math.random()*listaAmigos.length);
+        let amigoSecreto = listaAmigos[amigoSeleccionado];
+        let resultadoHTML = document.getElementById("resultado");
+        resultadoHTML.innerHTML = amigoSecreto;
+    }
+}
+
     console.log(listaAmigos);
